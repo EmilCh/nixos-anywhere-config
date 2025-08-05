@@ -38,7 +38,6 @@ in
 
   environment.systemPackages = with pkgs; [
     wget
-    vim
     htop
     bridge-utils
     git
@@ -47,6 +46,14 @@ in
     dig
     xfsprogs
   ];
+
+  programs.neovim = {          
+    enable = true;             
+    viAlias = true;
+    vimAlias = true;
+    defaultEditor = true;
+  };
+
 
   services.openssh.enable = true;
 
