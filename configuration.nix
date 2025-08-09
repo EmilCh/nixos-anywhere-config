@@ -22,10 +22,10 @@ in
   networking.interfaces.br0.ipv4.addresses = [ {
     address = "192.168.122.30";
     prefixLength = 24;
-    dns = [ "192.168.122.1"];
   } ];
 
   networking.defaultGateway = "192.168.122.1";
+  networking.nameservers = ["192.168.122.1" "8.8.8.8"]
 
   time.timeZone = "Europe/Paris";
 
